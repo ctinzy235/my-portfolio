@@ -1,0 +1,134 @@
+.section {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+  flex-wrap: wrap; /* Cho phép xuống hàng khi màn hình nhỏ */
+  padding-left: 1%;
+  padding-right: 6%;
+}
+
+.image {
+  flex: 1 1 35%; /* chiếm 40% chiều rộng */
+  max-width: 500px;
+}
+
+.image img {
+  width: 80vh;
+  height: 100%;
+  border-radius: 12px;
+  /* margin-top: 3vh; */
+  box-shadow: 0 4px 12px rgba(82, 81, 82, 0.4);
+}
+
+.intro {
+  flex: 1 1 60%;  
+  max-width: 600px;
+}
+
+.title {
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: clamp(2rem, 5vw, 5rem); /* Tự co giãn theo màn hình */
+  font-weight: 700;
+  color: #ffaad5;
+  line-height: 1.1;
+}
+
+.description {
+  margin-top: 1.5rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.socialLinks a {
+  color: #ffaad5;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #f08bbe;
+  transform: scale(1.1);
+}
+
+.titleHighlight {
+  position: relative;
+  display: inline-block;
+}
+
+.titleHighlight::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1.5rem);
+  transform: translateY(-50%);
+  width: clamp(150px, 40vw, 750px); /* responsive line */
+  height: 1px;
+  background-color: #ffaad5;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonLink {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid #ffaad5;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* bỏ gạch chân mặc định của link */
+}
+
+.buttonLink:hover {
+  background-color: #ffaad5;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+/* 📱 Mobile responsive */
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .image {
+    max-width: 80%;
+  }
+
+  .titleHighlight::after {
+    display: none; /* bỏ line khi màn nhỏ */
+  }
+
+  .btn button {
+    margin-left: 0; /* căn giữa */
+  }
+}
