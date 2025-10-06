@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 section {
-  scroll-margin-top: 10vh; /* chiều cao navbar */
+  scroll-margin-top: 10vh; 
   min-height: 100vh;
 }
 
@@ -24,25 +24,25 @@ nav {
   height: 10vh;
   position: fixed;
   top: 0;
-  background: #2d2d2d;  /* cho nav có nền riêng */
+  background: #2d2d2d; 
   z-index: 10;
 }
 
 .nav-container {
-  max-width: 1200px;   /* giới hạn chiều ngang nav */
-  margin: 0 auto;      /* canh giữa */
+  max-width: 1200px;   
+  margin: 0 auto;      
   height: 100%;
   display: flex;
-  justify-content: space-between; /* logo trái - links phải */
+  justify-content: space-between; 
   align-items: center;
-  padding: 0 0px;     /* khoảng cách bên trong nav */
+  padding: 0 0px;    
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 2rem; /* khoảng cách giữa links và icon */
-  /* font-size: 10px; */
+  gap: 2rem; 
+ 
 }
 
 .nav-container .links {
@@ -71,7 +71,7 @@ nav {
 
 .logo span {
   color: #f8f8f8;
-  /* text-shadow: #FFAAD5 0px 0px 10px; */
+ 
 }
 
 .nav-container .links a::before {
@@ -91,7 +91,7 @@ nav {
 
 .nav-container .links a:hover {
   color: #FFAAD5;
-  /* text-shadow: #f08bbe 0px 0px 10px; */
+ 
 }
 
 .title {
@@ -102,7 +102,7 @@ nav {
   line-height: 1.1;
 }
 
-/* react-slick carousel */
+
 .slick-slide img {
   display: block;
   margin: auto;
@@ -110,6 +110,6 @@ nav {
 
 .slick-prev:before,
 .slick-next:before {
-  color: black; /* màu mũi tên */
+  color: black; 
 }
 

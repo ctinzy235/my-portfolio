@@ -13,8 +13,7 @@
   align-items: center;
   gap: 5%;
   width: 100%;
-  /* flex-wrap: wrap;  */
-  /* padding: 0 1%; */
+  
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -29,7 +28,7 @@
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(82, 81, 82, 0.4);
-  object-fit: cover; /* nếu muốn ảnh luôn lấp đầy */
+  object-fit: cover; 
 }
 
 .intro {
@@ -39,7 +38,7 @@
 
 .title {
   font-family: var(--font-bricolage), sans-serif;
-  font-size: clamp(2rem, 5vw, 5rem); /* Tự co giãn theo màn hình */
+  font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 700;
   color: #ffaad5;
   line-height: 1.1;
@@ -81,7 +80,7 @@
   top: 50%;
   left: calc(100% + 1.5rem);
   transform: translateY(-50%);
-  width: clamp(150px, 40vw, 750px); /* responsive line */
+  width: clamp(150px, 40vw, 750px); 
   height: 1px;
   background-color: #ffaad5;
 }
@@ -103,7 +102,7 @@
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-decoration: none; /* bỏ gạch chân mặc định của link */
+  text-decoration: none;
 }
 
 .buttonLink:hover {
@@ -113,7 +112,7 @@
 }
 
 
-/* 📱 Mobile responsive */
+/*  Mobile responsive */
 @media (max-width: 768px) {
   .mainContainer {
     flex-direction: column;
@@ -126,10 +125,10 @@
   }
 
   .titleHighlight::after {
-    display: none; /* bỏ line khi màn nhỏ */
+    display: none; 
   }
 
   .btn button {
-    margin-left: 0; /* căn giữa */
+    margin-left: 0; 
   }
 }

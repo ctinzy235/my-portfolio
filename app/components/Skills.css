@@ -18,8 +18,8 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   justify-content: center;
- max-width: 1100px;  /* 👈 Giới hạn vùng hiển thị */
-  margin: 0 auto;     /* 👈 Căn giữa toàn bộ grid */
+ max-width: 1100px;  
+  margin: 0 auto;     
 }
 
 .skillCard {

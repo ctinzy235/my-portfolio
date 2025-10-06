@@ -56,7 +56,7 @@ export default function Contact() {
         {/* Design bên phải */}
         <div className="contact-right">
           <img
-            src="/images/profile-pic.jpg"  // đường dẫn ảnh bạn up vào public/images
+            src="/images/profile-pic.jpg"  
             alt="Thank you"
             className="thanks-image"
           />

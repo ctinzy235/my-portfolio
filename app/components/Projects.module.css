@@ -24,9 +24,9 @@
 
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 330px)); /* min 200px, max 300px */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 330px)); 
   gap: 3rem;
-  justify-content: center; /* căn giữa khi dư khoảng trống */
+  justify-content: center;
 }
 
 .card {
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden; 
-  height: 350px;              /* 🔥 cố định chiều cao */
+  height: 350px;             
 }
 
 .linkWrapper {
@@ -45,7 +45,7 @@
 }
 
 .imageWrapper {
-  flex: 0 0 60%;              /* 🔥 ảnh chiếm 50% card */
+  flex: 0 0 60%;              
   width: 100%;
   overflow: hidden;
 }
@@ -53,18 +53,18 @@
 .cardImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* 🔥 crop ảnh vừa khung */
+  object-fit: cover;          
   display: block;
   object-position: center; 
 }
 
 .cardContent {
-  flex: 0 0 40%;              /* 🔥 text+links chiếm 50% card */
+  flex: 0 0 40%;              
   padding: 1rem;  
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  overflow: hidden;           /* tránh text tràn */
+  overflow: hidden;           
 }
 
 .card h2 {
@@ -74,21 +74,21 @@
 }
 
 .card h2 a {
-  color: #fffdfe;            /* đổi màu chữ link */
-  text-decoration: none;     /* bỏ gạch chân */
-  font-weight: bold;         /* giữ cho tiêu đề nổi bật */
+  color: #fffdfe;           
+  text-decoration: none;     
+  font-weight: bold;       
   transition: color 0.2s ease-in-out;
 }
 
 .card h2 a:hover {
-  color: #fbe9f2;            /* màu đậm hơn khi hover */
-  /* text-decoration: underline;  */
+  color: #fbe9f2;           
+ 
 }
 
 .card p {
   font-size: 11px;
   line-height: 1.4;
-  max-height: calc(1.4em * 3); /* 🔥 tối đa 3 dòng */
+  max-height: calc(1.4em * 3); 
   overflow: hidden;
   color: #d4cece;
   margin-top: 0%;
@@ -101,7 +101,7 @@
 }
 
 .links {
-  margin-top: auto;           /* 🔥 luôn đẩy xuống cuối */
+  margin-top: auto;           
   display: flex;
   gap: 1rem;
 }
