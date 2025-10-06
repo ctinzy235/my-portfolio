@@ -1,7 +1,7 @@
 .skillsSection {
   background: #000;
   color: #fff;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 }
 
@@ -17,10 +17,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  justify-content: center;
+ max-width: 1100px;  /* 👈 Giới hạn vùng hiển thị */
+  margin: 0 auto;     /* 👈 Căn giữa toàn bộ grid */
 }
 
 .skillCard {
+   
   background: #1a1a1a;
   padding: 2rem 1.5rem;
   border-radius: 16px;

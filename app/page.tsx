@@ -21,7 +21,7 @@ export default function Home() {
             />
           </div>
           <div className={styles.intro}>
-            <h1 className="title">
+            <h1 className={styles.title}>
               <span className={styles.titleHighlight}>My</span> <br /> Portfolio
             </h1>
             <div>

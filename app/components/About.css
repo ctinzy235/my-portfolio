@@ -1,48 +1,55 @@
 .about-content {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 40px;
-    /* background-color: #d7b5b5; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  padding: 4vw 2vw; /* co giãn theo màn hình */
+  margin: 0 auto;
+  transition: padding 0.4s ease;
 }
 
 .about-left,
 .about-right {
-    flex: 1;
-    /* mỗi bên 1 phần bằng nhau */
-    width: 50%;
-    /* giữ tỷ lệ 1/2 */
+  flex: 1;
+  width: 50%;
+  transition: all 0.4s ease;
 }
 
 .profile-wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .profile-img {
-    width: 95%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 3px;
-    /* giữ đúng tỉ lệ gốc ảnh */
+  width: 95%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 3px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
 }
 
 .about-title {
-  font-size: clamp(2rem, 4vw, 3.5rem); /* co giãn */
+  font-size: 2.2rem; /* base size để không bị dư nền */
   font-weight: 700;
-  margin-bottom: 2vw;
+  margin-bottom: 1.5rem;
   color: #ffaad5;
   font-family: var(--font-bricolage), sans-serif;
 }
 
 .about-right p {
-  font-size: clamp(1rem, 1vw, 1.2rem); /* responsive text */
-  line-height: 1.6;
-  margin-bottom: 1.5vw;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
   color: #f0f0f0;
-  text-align: justify; 
+  text-align: justify;
+  max-width: 600px; /* tránh text quá dài gây dư khoảng đen */
 }
 
 .highlight {
@@ -50,24 +57,63 @@
   font-weight: 600;
 }
 
-/* Responsive cho mobile */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-left,
-    .about-right {
-        width: 100%;
-        /* khi xuống mobile thì full width */
-    }
-
-    .about-right {
-        margin-top: 20px;
-    }
+/* Responsive Tablet */
+@media (max-width: 1024px) {
+  .about-content {
+    padding: 6vw 4vw;
+    gap: 2rem;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-right p {
+    font-size: 0.95rem;
+    max-width: 550px;
+  }
 }
 
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 6vw 3vw;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-right {
+    margin-top: 20px;
+  }
+
+  .about-right p {
+    max-width: 90%;
+    margin: 0 auto 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .profile-img {
+    width: 80%;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-right p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* ------- EDUCATION ------- */
 .education {
   display: flex;
   align-items: center;
@@ -76,7 +122,7 @@
 }
 
 .edu-text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
