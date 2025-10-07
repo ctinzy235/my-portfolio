@@ -2,12 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
   width: 100%;
+  height: 100%;
+  min-height: 90vh;
   gap: 40px;
-  padding: 4vw 2vw; 
-  margin: 0 auto;
-  transition: padding 0.4s ease;
+  /* transition: padding 0.4s ease; */
 }
 
 .about-left,
@@ -24,19 +23,16 @@
 }
 
 .profile-img {
-  width: 95%;
+  width: 90vh;
   height: auto;
   object-fit: contain;
-  margin-top: 3px;
-  transition: transform 0.3s ease;
+
 }
 
-.profile-img:hover {
-  transform: scale(1.03);
-}
+
 
 .about-title {
-  font-size: 2.2rem; 
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #ffaad5;
@@ -44,12 +40,11 @@
 }
 
 .about-right p {
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 1.2vw, 2rem);
   line-height: 1.7;
   margin-bottom: 1.2rem;
   color: #f0f0f0;
   text-align: justify;
-  max-width: 600px; 
 }
 
 .highlight {
@@ -57,20 +52,98 @@
   font-weight: 600;
 }
 
+/* ------- EDUCATION ------- */
+.education {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.edu-text {
+  font-size: clamp(0.6rem, 1.2vw, 5rem);
+  line-height: 1.4;
+}
+
+.edu-link {
+  color: #ffaad5; 
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.edu-link:hover {
+  text-decoration: underline;
+}
+
+.edu-logo img {
+  width: clamp(40px, 6vw, 80px); 
+  height: auto;
+  border-radius: 2px;
+}
+
+.about-right p,
+.education {
+  max-width: 40vw; /* đồng bộ với đoạn p */
+  width: 100%;
+}
 /* Responsive Tablet */
+/* Responsive Tablet (≤1024px) */
 @media (max-width: 1024px) {
+  section {
+    min-height: auto; 
+    padding: 4vw 2vw;
+  }
+
   .about-content {
-    padding: 6vw 4vw;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
   }
+
+  .about-left {
+    width: 80%;
+  }
+
+  .about-left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(82, 81, 82, 0.4);
+  }
+
+  .about-right {
+    width: 90%;
+    /* max-width: 650px; */
+  }
+
   .about-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
   }
-  .about-right p {
-    font-size: 0.95rem;
-    max-width: 550px;
+
+  .about-right p,
+  .edu-text {
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    max-width: 100%;
+  }
+
+  .education {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .edu-logo img {
+    width: clamp(45px, 7vw, 80px);
+    height: auto;
   }
 }
+
 
 /* Responsive Mobile */
 @media (max-width: 768px) {
@@ -90,10 +163,26 @@
     margin-top: 20px;
   }
 
-  .about-right p {
+  .about-right p,
+  .edu-text {
     max-width: 90%;
     margin: 0 auto 1.5rem;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 1.2vw, 2rem);
+  }
+
+  .education {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 0.8rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .edu-logo img {
+    width: clamp(50px, 20vw, 100px);
   }
 
   .profile-img {
@@ -107,35 +196,10 @@
     font-size: 1.6rem;
   }
 
-  .about-right p {
+  .about-right p,
+  .edu-text {
     font-size: 0.9rem;
     line-height: 1.6;
   }
 }
 
-/* ------- EDUCATION ------- */
-.education {
-  display: flex;
-  align-items: center;
-  margin-top: 1.5rem;
-  gap: 1rem;
-}
-
-.edu-text {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.edu-link {
-  color: #ffaad5; 
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.edu-link:hover {
-  text-decoration: underline;
-}
-
-.edu-logo img {
-  border-radius: 2px;
-}

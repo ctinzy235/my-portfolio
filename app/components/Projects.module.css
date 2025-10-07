@@ -116,3 +116,28 @@
 .links a:hover {
   color: #fbe9f2;
 }
+
+/* Tablet & Mobile */
+@media (max-width: 1024px) {
+  .projectsSection {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 1.2rem;
+    text-align: center; 
+  }
+
+  .intro {
+    max-width: 90%;
+    margin: 0 auto 2rem; 
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: justify;
+    text-align-last: center; 
+  }
+
+ 
+}
